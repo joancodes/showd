@@ -32,6 +32,7 @@ class PlaysController < ApplicationController
             redirect_to play_path(@play)
         else 
             render 'edit'
+            
         end 
 
     end
