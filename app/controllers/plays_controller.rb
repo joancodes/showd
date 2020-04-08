@@ -31,7 +31,7 @@ class PlaysController < ApplicationController
 
     def update
         @play.category_id = params[:category_id]
-        
+
         if @play.update(play_params)
             redirect_to play_path(@play)
         else 
@@ -42,7 +42,6 @@ class PlaysController < ApplicationController
     end
 
     def destroy
-
         @play.destroy
         redirect_to root_path
 
