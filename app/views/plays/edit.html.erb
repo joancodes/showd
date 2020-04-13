@@ -1,5 +1,6 @@
 <h1> Edit Showd Play </h1>
 <%= simple_form_for @play, html: {multipart: true} do |f| %>
+  <%= f.file_field :image%>
   <%= f.select :category_id, @categories %>
   <%= f.input :title, label: "Play Title" %>
   <%= f.input :description %>
