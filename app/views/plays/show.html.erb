@@ -1,13 +1,13 @@
-<h2> <%= @play.title %></h2>
-<h3> <%= @play.description %></h3>
-<h4> <%= @play.category.name %> </h5>
+<h2>  <%= @play.title %> </h2>
+<h3> <i> <%= @play.category.name %> </i> </h3>
+<h4> <%= @play.description %></h4>
 <p> <%= @play.director%></p>
 
 <div class="links btn-group">
 <% if user_signed_in? %>
   <% if @play.user_id == current_user.id %>
-<%= link_to  "Edit", edit_play_path(@play) %>
-<%= link_to  "Delete", play_path(@play), method: :delete, data:{confirm: "Are you sure?"} %>
+    <%= link_to  "Edit", edit_play_path(@play) %>
+    <%= link_to  "Delete", play_path(@play), method: :delete, data:{confirm: "Are you sure?"} %>
 <% end %>
 <% end %>
 </div>
