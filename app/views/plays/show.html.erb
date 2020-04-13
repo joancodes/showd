@@ -1,13 +1,24 @@
-<h2> <%= @play.title %> </h2>
-<h3> <i><%= @play.category.name %></i> </h3>
-<h4> <%= @play.description %></h4>
-<p> <%= @play.director%></p>
+<div class="row">
+  <div class="col-md-4">
+    <%= image_tag @play.image, class: "play-show"%>
+  </div>
+
+  <div class="col-md-8">
+    <div class="play-info">
+      <h2 class="play-title"> <%= @play.title %> </h2>
+      <h3 class="play-director"> <span>From </span><%= @play.director %></h3>
+      <h4 class="play-director"> <i><%= @play.category.name %></i> </h4>
+      <p class="play-desc"> <%= @play.description%></p>
+    </div>
+  </div>
+
+</div>
 
 <div class="links btn-group">
 <% if user_signed_in? %>
   <% if @play.user_id == current_user.id %>
-    <%= link_to  "Edit", edit_play_path(@play) %>
-    <%= link_to  "Delete", play_path(@play), method: :delete, data:{confirm: "Are you sure?"} %>
-<% end %>
+    <%= link_to  "Edit", edit_play_path(@play), class: "btn btn-custom" %>
+    <%= link_to  "Delete", play_path(@play), method: :delete, data:{confirm: "Are you sure?"}, class: "btn btn-custom" %>
+  <% end %>
 <% end %>
 </div>
