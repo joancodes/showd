@@ -28,6 +28,16 @@
          <% end %>
         </ul>
         <ul class="nav navbar-nav">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Sort <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <% Category.all.each do |category| %>
+                <li class="<%= 'active' if params[:category] == category.name %>">
+                  <%= link_to category.name, plays_path(category: category.name), class: "link" %>
+                </li>
+                <% end %>
+            </ul>
+          </li>
           <% if user_signed_in? %>
             <li> <%=link_to "Add Play", new_play_path %></li>
           <% end %>
