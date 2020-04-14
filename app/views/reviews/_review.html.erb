@@ -1,5 +1,5 @@
 <div class="review">
-    <p><%= review.rating %></p>
+    <div class="review-rating" data-score="<%= review.rating %>"></div>
     <p class="review-comment"><%= review.comment %></p>
     <% if user_signed_in? %>
         <% if review.user_id == current_user.id %>

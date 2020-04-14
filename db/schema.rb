@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_14_083924) do
+ActiveRecord::Schema.define(version: 2020_04_14_111212) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -47,6 +47,38 @@ ActiveRecord::Schema.define(version: 2020_04_14_083924) do
     t.datetime "updated_at", null: false
     t.integer "user_id"
     t.integer "category_id"
+  end
+
+  create_table "rating_rates", force: :cascade do |t|
+    t.decimal "value", precision: 25, scale: 16, default: "0.0"
+    t.string "author_type", limit: 10, null: false
+    t.integer "author_id", null: false
+    t.string "resource_type", limit: 10, null: false
+    t.integer "resource_id", null: false
+    t.string "scopeable_type", limit: 10
+    t.integer "scopeable_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["author_type", "author_id", "resource_type", "resource_id", "scopeable_type", "scopeable_id"], name: "index_rating_rates_on_author_and_resource_and_scopeable", unique: true
+    t.index ["author_type", "author_id"], name: "index_rating_rates_on_author_type_and_author_id"
+    t.index ["resource_type", "resource_id"], name: "index_rating_rates_on_resource_type_and_resource_id"
+    t.index ["scopeable_type", "scopeable_id"], name: "index_rating_rates_on_scopeable_type_and_scopeable_id"
+  end
+
+  create_table "rating_ratings", force: :cascade do |t|
+    t.decimal "average", precision: 25, scale: 16, default: "0.0"
+    t.decimal "estimate", precision: 25, scale: 16, default: "0.0"
+    t.integer "sum", default: 0
+    t.integer "total", default: 0
+    t.string "resource_type", limit: 10, null: false
+    t.integer "resource_id", null: false
+    t.string "scopeable_type", limit: 10
+    t.integer "scopeable_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["resource_type", "resource_id", "scopeable_type", "scopeable_id"], name: "index_rating_rating_on_resource_and_scopeable", unique: true
+    t.index ["resource_type", "resource_id"], name: "index_rating_ratings_on_resource_type_and_resource_id"
+    t.index ["scopeable_type", "scopeable_id"], name: "index_rating_ratings_on_scopeable_type_and_scopeable_id"
   end
 
   create_table "reviews", force: :cascade do |t|
