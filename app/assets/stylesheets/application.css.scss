@@ -2,24 +2,332 @@
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
  *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
  *
  * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
  *
+ *= require_tree .
+ *= require_self
  */
 
+ @import url(https://fonts.googleapis.com/css?family=Lato); 
  @import "bootstrap-sprockets";
  @import "bootstrap";
-
+ 
+ /* Variables, mixins, etc.. */
+ 
+ @mixin background-tile {
+     box-sizing: border-box;
+     background-color: #fff;
+     border-radius: 5px;
+     box-shadow: 1px 1px 3px 4px #ccc;
+     padding: 0.6em 0.6em;
+ }
+ 
+ 
+ /* General styles */
+ 
+ body {
+     background: -webkit-linear-gradient(40deg, #d1edf0 10%, #ecc8c6 100%);
+   background:    -moz-linear-gradient(40deg, #d1edf0 10%, #ecc8c6 100%);
+   background:     -ms-linear-gradient(40deg, #d1edf0 10%, #ecc8c6 100%);
+   background:      -o-linear-gradient(40deg, #d1edf0 10%, #ecc8c6 100%);
+   background:         linear-gradient(40deg, #d1edf0 10%, #ecc8c6 100%);
+     font-family: 'Lato', sans-serif;
+ }
+ 
+ h1, h2, h3, h4, h5, h6 {
+     font-family: 'Lato', sans-serif;
+     font-weight: 200;
+     text-transform: uppercase;
+ }
+ 
+ p.alert, p.notice {
+     margin: 0;
+ }
+ 
+ 
+ /* Navbar/navigation styles */
+ 
+ .navbar {
+     font-family: 'Lato', sans-serif;
+     text-transform: uppercase;
+ }
+ .navbar-default {
+     background-color: #fff;
+     padding-bottom: 5px;
+     padding-top: 5px;
+ 
+     .navbar-nav > li > a {
+         color: #222;
+         &:hover {
+             color: darken(#bdbdbd, 5%);
+             transition: 0.5s;
+         }
+     }
+ 
+     .navbar-header {
+ 
+         .navbar-brand {
+             color: #A77DC2;
+             letter-spacing: 1.4px;
+             text-transform: uppercase;
+             font-size: 2.3em;
+             font-weight: bold;
+         }
+ 
+     }
+ 
+     .dropdown-menu > li > a:hover {
+         background-color: darken(#bdbdbd, 5%);
+         color: #fff;
+     }
+ 
+     .navbar-nav > .open > a, .navbar-nav > .open > a:hover, .navbar-nav > .open > a:focus {
+         background-color: darken(#bdbdbd, 5%);
+         color: #fff;	
+     }
+ 
+ }
+ 
+ .dropdown-menu > .active > a {
+     background-color: #bdbdbd;
+     color: #fff;
+ }
+ 
+ 
+ /* Button/link styles */
+ 
+ .btn-custom {
+     color: darken(#bdbdbd, 5%);
+     background-color: #fff;
+     border: 1px solid darken(#bdbdbd, 5%);
+     padding: 8px 20px;
+     border-radius: 0px;
+     font-family: 'Lato', sans-serif;
+     &:hover {
+         text-decoration: none;
+         background-color: darken(#bdbdbd, 5%);
+         color: #fff;
+         transition: 0.5s;
+     }
+ }
+ 
+ .btn-custom2 {
+     color: #333;
+     background-color: #fff;
+     border: 1px solid #222;
+     padding: 8px 20px;
+     border-radius: 0px;
+     font-family: 'Lato', sans-serif;
+     &:hover {
+         text-decoration: none;
+         background-color: #333;
+         color: #fff;
+         transition: 0.5s;
+     }	
+ }
+ 
+ .links {
+ 
+     .btn-custom {
+         padding: 3px 10px;
+         font-weight: 300;
+     }
+ 
+ }
+ 
+ .play-links {
+ 
+     .btn-custom {
+         padding: 3px 10px;
+         font-weight: 300;
+         margin-top: 40px;	
+     }
+ 
+ }
+ 
+ /* Play styles */
+ 
  .play {
      height: 350px;
      width: 250px;
+     margin-bottom: 40px;
+     @include background-tile;
  }
+ 
  .play-show {
-    height: 475px;
-    width: 325px;
-}
+     height: 475px;
+     width: 325px;
+     @include background-tile;
+ }
+ 
+ .play-info {
+     @include background-tile;
+ 
+     .play-title {
+         margin-top: 0;
+         font-size: 4em;
+         font-weight: bold;
+     }
+ 
+     .avg-rating {
+         font-size: 1.5em;
+         margin-top: 75px;
+         margin-bottom: 5px;
+         font-weight: bold;
+     }
+ 
+     .number-of-reviews {
+         font-size: 0.85em;
+         font-style: italic;
+     }
+ 
+     .play-director {
+         font-size: 1.5em;
+         margin-top: 10px;
+         margin-bottom: 10px;
+         font-style: italic;
+         font-weight: lighter;
+         span {
+             font-size: 0.80em;
+         }	
+     }
+ 
+     .play-desc {
+         font-size: 1.05em;
+         line-height: 1.5;
+         margin-bottom: 15px;
+         margin-top: 15px;
+     }
+ 
+ }
+ 
+ 
+ /* current-category styles */
+ 
+ .current-category {
+     margin-bottom: 40px;
+ }
+ 
+ 
+ /* Reviews styles */
+ 
+ .reviews {
+ 
+     @include background-tile;
+     margin-top: 40px;
+ 
+     h1 {
+         margin-top: 0;
+         margin-bottom: 15px;
+         font-size: 2em;
+         font-weight: bold;
+     }
+ 
+     .review {
+         border-bottom: 1px solid gainsboro;
+         margin-bottom: 15px;
+         padding-bottom: 10px;
+ 
+         .review-comment {
+             font-size: 1.05em;
+             line-height: 1.5;
+         }
+ 
+     }
+ 
+     .new-review {
+         padding-top: 8px;
+     }
+ 
+ }
+ 
+ /* New Play Form styles */
+ 
+ .new-play-form {
+     @include background-tile;
+ 
+     h1 {
+         margin-top: 0;
+         font-weight: bold;
+     }
+ 
+     #category_id {
+         margin-bottom: 10px;
+     }
+ 
+     #play_play_img {
+         margin-bottom: 10px;
+     }
+ 
+ }
+ 
+ 
+ /* Edit Play Form styles */
+ 
+ .edit-play-form {
+ 
+     @include background-tile;
+ 
+     h1 {
+         margin-top: 0;
+         font-weight: bold;
+     }
+ 
+     #play_category_id {
+         margin-bottom: 10px;
+     }
+ 
+     #play_play_img {
+         margin-bottom: 10px;
+     }
+ 
+ }
+ 
+ /* New/Edit review form styles */
+ 
+ .new-review-form, .edit-review-form {
+     @include background-tile;
+ 
+     h1 {
+         margin-top: 0;
+         font-weight: bold;
+     }
+ 
+     #rating-form {
+         margin-bottom: 15px;
+ 
+         label {
+             display: block;
+         }
+ 
+     }
+ 
+ }
+ 
+ 
+ /* Signup/Login form styles */
+ 
+ .signup-form {
+     @include background-tile;
+ 
+     h2 {
+         margin-top: 0;
+         font-weight: bold;
+     }
+ 
+ }
+ 
+ .login-form {
+     @include background-tile;
+ 
+     h2 {
+         margin-top: 0;
+     }
+ 
+ }
