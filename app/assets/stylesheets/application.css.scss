@@ -204,6 +204,13 @@
          margin-bottom: 15px;
          margin-top: 15px;
      }
+
+     .play-edit-title {
+        font-size: 1.1em;
+        margin-top: 5px;
+        margin-bottom: 15px;
+        font-weight: bold;
+     }
  
  }
  
@@ -221,6 +228,7 @@
  
      @include background-tile;
      margin-top: 40px;
+     margin-bottom: 40px;
  
      h1 {
          margin-top: 0;
@@ -243,6 +251,9 @@
  
      .new-review {
          padding-top: 8px;
+     }
+     .div-add-reviews {
+        margin-bottom: 10px;
      }
  
  }
