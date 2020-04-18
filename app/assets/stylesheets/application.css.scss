@@ -47,7 +47,8 @@
  }
  
  p.alert, p.notice {
-     margin: 0;
+     margin: 10px;
+     padding: 10px;
  }
  
  
@@ -342,3 +343,21 @@
      }
  
  }
+
+ /* Footer styles */
+
+.footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+
+  .gmail-img {
+    padding-right: 8px;
+  }
+
+  .footer-links {
+      text-align: center;
+  }
+
+}
