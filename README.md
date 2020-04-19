@@ -7,7 +7,7 @@ and also Review using a 5-star rating system (w/ Average Ratings as well).
 1. Uploding of images using [Active Storage](https://github.com/rails/rails/tree/master/activestorage) instead of [Paper Clip](https://github.com/thoughtbot/paperclip).
 2. Adding a favicon using [RealFaviconGenerator](https://realfavicongenerator.net/).
 3. More [CSS](https://github.com/nyamburanjuguna/showd/blob/master/app/assets/stylesheets/application.css.scss) styling.
-
+4. The [name](https://github.com/nyamburanjuguna/showd) too.
 
 ## Getting started
 
