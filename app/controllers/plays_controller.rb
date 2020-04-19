@@ -26,7 +26,6 @@ class PlaysController < ApplicationController
 
     def create
         @play = current_user.plays.build(play_params)
-        # @play.image.attach(params[:image])
         @play.category_id = params[:category_id]
 
         if @play.save 

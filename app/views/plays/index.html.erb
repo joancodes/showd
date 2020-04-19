@@ -3,12 +3,15 @@
 <% if @plays.count == 0 %>
 <h3>There are no plays in this category</h3>
 <% else %>
+    
     <div class="row">
         <% @plays.each do |play| %>
         <div class="col-md-3">
             <a href="/plays/ <%= play.id %>">
-            <%= image_tag play.image, class: "play" %>
-            </a>
+            <% if play.image.attached? %>
+            <%= image_tag (play.image), class: "play"%>
+            <% end %>
+            </a> 
         </div>  
         <% end %>
     </div>
