@@ -43,11 +43,10 @@ In use `Bundler version 2.1.4` and yarn -v `1.22.4`
 
 ### Initialize the database 
 
-Note: this application is using the [default](https://github.com/sparklemotion/sqlite3-ruby) ruby database
-
 ``` shell
 rails db:create db:migrate db:seed
 ```
+Note: this application is using the [default](https://github.com/sparklemotion/sqlite3-ruby) ruby database
 
 ## Serve 
 
