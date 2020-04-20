@@ -4,7 +4,7 @@
       <%= simple_form_for @play, html: {multipart: true} do |f| %>
         <%= f.file_field :image %>
         <br>
-        <%= f.select :category_id, @categories %>
+        <%= f.select :category_id, options_from_collection_for_select(Category.all, :id, :name) %>
         <br> <br>
         <%= f.input :title, label: "Play Title" %>
         <%= f.input :description %>
