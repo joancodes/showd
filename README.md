@@ -4,7 +4,7 @@ This is a [modified](https://github.com/CrashLearner/BroadwayApp) web app that a
 and also Review using a 5-star rating system (w/ Average Ratings as well).
 
 ### What has changed?
-1. Uploding of images using [Active Storage](https://github.com/rails/rails/tree/master/activestorage) instead of [Paper Clip](https://github.com/thoughtbot/paperclip).
+1. Uploding of images using [Active Storage](https://github.com/rails/rails/tree/master/activestorage) instead of [Paper Clip](https://github.com/thoughtbot/paperclip) (including validations of attachments).
 2. Adding a favicon using [RealFaviconGenerator](https://realfavicongenerator.net/).
 3. More [CSS](https://github.com/nyamburanjuguna/showd/blob/master/app/assets/stylesheets/application.css.scss) styling.
 4. The [name](https://github.com/nyamburanjuguna/showd) too.
