@@ -71,7 +71,6 @@ end
 group :production do
   # Use postgres as the production database 
   gem 'pg'
-  gem 'rails_12factor'
 end
 
 group :test do
