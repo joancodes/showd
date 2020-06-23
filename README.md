@@ -1,4 +1,4 @@
-# SHOWD App - [Link to App](https://www.heruko.com)
+# SHOWD App
 
 This is a [modified](https://github.com/CrashLearner/BroadwayApp) web app that allows users to add movies and series (with full CRUD ability), assign to Categories (Genres of the movies and series)
 and also Review using a 5-star rating system (w/ Average Ratings as well).
@@ -67,6 +67,4 @@ Puma starting in single mode...
 Use Ctrl-C to stop
 ```
 Now open your browser and type the following `http://localhost:3000` to load the application.
-
-## Deploy
 
