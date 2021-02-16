@@ -15,6 +15,8 @@ gem 'active_storage_validations'
 
 gem "aws-sdk-s3", require: false
 
+gem 'bundler-audit'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.4', '>= 5.2.4.2'
 
