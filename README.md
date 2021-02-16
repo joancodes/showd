@@ -1,3 +1,5 @@
+[![Ruby Style Guide](https://img.shields.io/badge/code_style-rubocop-brightgreen.svg)](https://github.com/rubocop-hq/rubocop)
+
 # SHOWD App
 
 This is a [modified](https://github.com/CrashLearner/BroadwayApp) Broadway look alike web app that allows users to add movies and series (with full CRUD ability), assign to Categories (Genres of the movies and series)
