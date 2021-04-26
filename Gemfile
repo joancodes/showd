@@ -13,8 +13,6 @@ gem 'devise'
 
 gem 'active_storage_validations'
 
-gem "aws-sdk-s3", require: false
-
 gem 'bundler-audit'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
