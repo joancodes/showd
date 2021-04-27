@@ -7,7 +7,7 @@
     <div class="row">
         <% @plays.each do |play| %>
         <div class="col-md-3">
-            <a href="/plays/ <%= play.id %>">
+            <a href="/plays/<%= play.id %>">
             <%if play.image.attached?%>
             <%= image_tag play.image, class: "play" %>
             <% end %>

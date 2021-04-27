@@ -36,7 +36,8 @@ class PlaysController < ApplicationController
     end
 
     def edit
-        @categories = Category.all.map{ |c| [c.name, c.id] }
+        @categories = Category.all
+        @category = @play.category
     end
 
     def update
