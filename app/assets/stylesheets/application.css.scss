@@ -30,7 +30,10 @@
  
  
  /* General styles */
- 
+ *, *::before, *::after{
+    box-sizing: border-box;
+ }
+
  body {
      background: -webkit-linear-gradient(40deg, #d1edf0 10%, #ecc8c6 100%);
    background:    -moz-linear-gradient(40deg, #d1edf0 10%, #ecc8c6 100%);
@@ -38,6 +41,7 @@
    background:      -o-linear-gradient(40deg, #d1edf0 10%, #ecc8c6 100%);
    background:         linear-gradient(40deg, #d1edf0 10%, #ecc8c6 100%);
      font-family: 'Lato', sans-serif;
+     margin: 0;
  }
  
  h1, h2, h3, h4, h5, h6 {
@@ -45,7 +49,17 @@
      font-weight: 200;
      text-transform: uppercase;
  }
+
+img {
+    max-width: 100%;
+}
  
+.container {
+    width: 85%;
+    margin: 0 auto;
+    max-width: 1128px;
+}
+
  p.alert, p.notice {
      margin: 10px;
      padding: 10px;
@@ -359,4 +373,21 @@
       text-align: center;
   }
 
+}
+
+@media (max-width: 700px) {
+    .play-title {
+        font-size: 2em !important; 
+    }
+
+    .col-md-8 {
+        margin-top: 30px;
+    }
+
+    .container {
+        width: 50%;
+        padding: 0;
+        margin: 0 auto;
+    }
+    
 }
