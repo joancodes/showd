@@ -25,13 +25,13 @@ cd showd
 ruby -v 
 rails -v
 ```
-The ouput should start with something like `ruby 2.6.0` `Rails 5.2.4.2`
+The ouput should start with something like `ruby 2.6.0` `Rails 5.2.6`
 
 If not, install the right ruby and rails versions using [rbenv](https://github.com/rbenv/rbenv) (it could take a while):
 
 ``` shell
 rbenv install 2.6.0
-gem install rails -v 5.2.4.2
+gem install rails -v 5.2.6
 ```
 
 ### Install dependencies
