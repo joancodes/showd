@@ -59,10 +59,10 @@ This will generate auto-code to start the server
 
 ``` shell
 => Booting Puma
-=> Rails 5.2.4.2 application starting in development
+=> Rails 5.2.6 application starting in development
 => Run `rails server -h` for more startup options
 Puma starting in single mode...
-* Version 3.12.4 (ruby 2.6.0-p0), codename: Llamas in Pajamas
+* Puma version: 5.3.2 (ruby 2.6.0-p0) ("Sweetnighter")
 * Min threads: 5, max threads: 5
 * Environment: development
 * Listening on tcp://localhost:3000
