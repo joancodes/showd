@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.6.0'
+ruby '3.1.0'
 
 gem 'simple_form'
 
@@ -18,10 +18,10 @@ gem 'bundler-audit'
 gem "aws-sdk-s3", require: false
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.2.4', '>= 5.2.4.2'
+gem 'rails', '~> 7.0', '>= 7.0.2.2'
 
 # Use Puma as the app server
-gem 'puma', '~> 5.5.1'
+gem 'puma', '~> 5.6', '>= 5.6.2'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
