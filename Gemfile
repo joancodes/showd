@@ -18,7 +18,7 @@ gem 'bundler-audit'
 gem "aws-sdk-s3", require: false
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 7.0', '>= 7.0.2.2'
+gem 'rails', '~> 7.0.2.3'
 
 # Use Puma as the app server
 gem 'puma', '~> 5.6', '>= 5.6.2'
