@@ -25,13 +25,13 @@ cd showd
 ruby -v 
 rails -v
 ```
-The ouput should start with something like `ruby 3.1.0` `Rails 7.0.2.2`
+The ouput should start with something like `ruby 3.1.0` `Rails 7.0.2.3`
 
 If not, install the right ruby and rails versions using [rbenv](https://github.com/rbenv/rbenv) (it could take a while):
 
 ``` shell
 rbenv install 3.1.0
-gem install rails -v 7.0.2.2
+gem install rails -v 7.0.2.3
 ```
 
 ### Install dependencies
@@ -59,7 +59,7 @@ This will generate auto-code to start the server
 
 ``` shell
 => Booting Puma
-=> Rails 7.0.2.2 application starting in development
+=> Rails 7.0.2.3 application starting in development
 => Run `bin/rails server --help` for more startup options
 Puma starting in single mode...
 * Puma version: 5.6.2 (ruby 3.1.0-p0) ("Birdie's Version")
