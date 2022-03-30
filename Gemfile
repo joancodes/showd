@@ -21,7 +21,7 @@ gem "aws-sdk-s3", require: false
 gem 'rails', '~> 7.0.2.3'
 
 # Use Puma as the app server
-gem 'puma', '~> 5.6', '>= 5.6.2'
+gem 'puma', '~> 5.6'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
