@@ -15,7 +15,7 @@
 
   <body>
 
-    <nav class="navbar navbaar-default">
+    <nav class="navbar navbar-default">
       <div class="container">
         <div class="navbar-header">
           <%= link_to  "Showd", root_path, class: "navbar-brand" %>
@@ -47,8 +47,14 @@
         </div>
       </div>
     </nav>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p> 
+
+    <% if notice %>
+      <p class="notice"><%= notice %></p>
+    <% end %>
+
+    <% if alert %>
+      <p class="alert"><%= alert %></p> 
+    <% end %>
     
    <div class="container">
     <%= yield %>
