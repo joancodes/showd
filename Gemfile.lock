@@ -184,7 +184,7 @@ GEM
     orm_adapter (0.5.0)
     pg (1.4.6)
     public_suffix (5.0.1)
-    puma (5.6.5)
+    puma (5.6.7)
       nio4r (~> 2.0)
     racc (1.6.2)
     rack (2.2.6.4)
@@ -309,7 +309,7 @@ DEPENDENCIES
   jquery-rails
   listen (>= 3.0.5, < 3.2)
   pg
-  puma (~> 5.6, >= 5.6.2)
+  puma (~> 5.6)
   rails (~> 7.0.2.3)
   rails_12factor
   rails_real_favicon
