@@ -237,7 +237,7 @@ GEM
     responders (3.1.1)
       actionpack (>= 5.2)
       railties (>= 5.2)
-    rexml (3.3.0)
+    rexml (3.3.3)
       strscan
     rubyzip (2.3.2)
     sass (3.7.4)
