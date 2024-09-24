@@ -62,7 +62,7 @@ group :development do
   gem 'rails_real_favicon'
   gem 'spring', '~> 3.0.0'
   # Use sqlite3 as the development database for Active Record
-  gem 'sqlite3'
+  gem 'sqlite3', '~> 1.4'
 end
 
 group :production do
