@@ -25,13 +25,13 @@ cd showd
 ruby -v 
 rails -v
 ```
-The ouput should start with something like `ruby 3.3.0` `Rails 7.0.2.4`
+The ouput should start with something like `ruby 3.3.6` `Rails 8.0.0`
 
 If not, install the right ruby and rails versions using [rbenv](https://github.com/rbenv/rbenv) (it could take a while):
 
 ``` shell
-rbenv install 3.3.0
-gem install rails -v 7.0.2.4
+rbenv install 3.3.6
+gem install rails -v 8.0.0
 ```
 
 ### Install dependencies
@@ -41,7 +41,7 @@ Using [Bundler]() and [Yarn]()
 ```shell
 bundle && yarn
 ```
-In use `Bundler version 2.3.3` and yarn -v `1.22.21`
+In use `Bundler version 2.3.3` and yarn -v `1.22.22`
 
 ### Initialize the database 
 
@@ -59,14 +59,14 @@ This will generate auto-code to start the server
 
 ``` shell
 => Booting Puma
-=> Rails 7.0.2.4 application starting in development
+=> Rails 8.0.0 application starting in development
 => Run `bin/rails server --help` for more startup options
 Puma starting in single mode...
-* Puma version: 5.6.8 (ruby 3.3.0-p0) ("Birdie's Version")
-*  Min threads: 5
-*  Max threads: 5
+* Puma version: 6.4.3 (ruby 3.3.6-p108) ("The Eagle of Durango")
+*  Min threads: 3
+*  Max threads: 3
 *  Environment: development
-*          PID: 62431
+*          PID: 34362
 * Listening on http://127.0.0.1:3000
 * Listening on http://[::1]:3000
 Use Ctrl-C to stop
