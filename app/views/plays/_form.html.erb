@@ -1,7 +1,7 @@
-<%= simple_form_for @play do |f| %>
+<%= simple_form_for play do |f| %>
   <%= f.file_field :image %>
   <br>
-  <%= select_tag :category_id, options_from_collection_for_select(Category.all, :id, :name), include_blank: "Select Category" %> 
+  <%= select_tag :category_id, options_from_collection_for_select(Category.all, :id, :name), include_blank: "Select Category" %>
   <br> <br>
   <%= f.input :title, label: "Play Title" %>
   <%= f.input :description %>

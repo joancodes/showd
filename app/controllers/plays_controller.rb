@@ -6,7 +6,7 @@ class PlaysController < ApplicationController
 
   def index
     if params[:category].blank?
-      @plays = Play.all.order('created_at DESC')
+      @plays = Play.order('created_at DESC')
     else
       @category_id = Category.find_by(name: params[:category]).id
       @plays = Play.where(category_id: @category_id).order('created_at DESC')
@@ -26,20 +26,20 @@ class PlaysController < ApplicationController
     @categories = Category.all.map { |c| [c.name, c.id] }
   end
 
+  def edit
+    @categories = Category.all
+    @category = @play.category
+  end
+
   def create
-    @play = current_user.plays.build(play_params)
-    @play.category_id = params[:category_id]
+    @category = Category.find(params[:category_id]) # Ensure the category exists
+    @play = @category.plays.build(play_params.merge(user: current_user))
 
     if @play.save
       redirect_to root_path
     else
       render 'new'
     end
-  end
-
-  def edit
-    @categories = Category.all
-    @category = @play.category
   end
 
   def update

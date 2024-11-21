@@ -12,7 +12,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 20_220_217_090_240) do
+ActiveRecord::Schema[8.0].define(version: 20_241_121_185_106) do
   create_table 'active_storage_attachments', force: :cascade do |t|
     t.string 'name', null: false
     t.string 'record_type', null: false
@@ -56,6 +56,8 @@ ActiveRecord::Schema[8.0].define(version: 20_220_217_090_240) do
     t.datetime 'updated_at', precision: nil, null: false
     t.integer 'user_id'
     t.integer 'category_id'
+    t.index ['category_id'], name: 'index_plays_on_category_id'
+    t.index ['user_id'], name: 'index_plays_on_user_id'
   end
 
   create_table 'reviews', force: :cascade do |t|
@@ -65,6 +67,8 @@ ActiveRecord::Schema[8.0].define(version: 20_220_217_090_240) do
     t.datetime 'updated_at', precision: nil, null: false
     t.integer 'user_id'
     t.integer 'play_id'
+    t.index ['play_id'], name: 'index_reviews_on_play_id'
+    t.index ['user_id'], name: 'index_reviews_on_user_id'
   end
 
   create_table 'users', force: :cascade do |t|

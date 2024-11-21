@@ -1,15 +1,15 @@
 <div class="col-md-10 col-md-offset-1">
-    <div class="new-play-form">
-      <h1> Edit Showd Play </h1>
-      <%= simple_form_for @play, html: {multipart: true} do |f| %>
-        <%= f.file_field :image %>
-        <br>
-        <%= f.select :category_id, options_from_collection_for_select(@categories, :id, :name, @category.id) %>
-        <br> <br>
-        <%= f.input :title, label: "Play Title" %>
-        <%= f.input :description %>
-        <%= f.input :director %>
-        <%= f.button :submit, class: 'btn-custom2' %>
-      <% end %>
-    </div>
-</div>    
+  <div class="new-play-form">
+    <h1> Edit Showd Play </h1>
+    <%= simple_form_for @play, html: {multipart: true} do |f| %>
+      <%= f.file_field :image %>
+      <br>
+      <%= f.select :category_id, options_from_collection_for_select(@categories, :id, :name, @category.id) %>
+      <br> <br>
+      <%= f.input :title, label: "Play Title" %>
+      <%= f.input :description %>
+      <%= f.input :director %>
+      <%= f.button :submit, class: 'btn-custom2' %>
+    <% end %>
+  </div>
+</div>
