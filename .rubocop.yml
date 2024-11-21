@@ -1,0 +1,78 @@
+require: rubocop-rails
+
+AllCops:
+  TargetRubyVersion: 3.3
+  NewCops: enable
+  SuggestExtensions: false
+  Exclude:
+    - bin/**
+    - tmp/**/*
+    - db/schema.rb
+    - db/migrate/*
+    - app/javascript/**/*
+    - node_modules/**/*
+
+Rails:
+  Enabled: true
+
+Rails/UnknownEnv:
+  Environments:
+    - production
+    - development
+    - test
+    - staging
+
+Rails/PluckInWhere:
+  Enabled: false
+
+Rails/ResponseParsedBody:
+  Enabled: false
+
+Rails/HasAndBelongsToMany:
+  Enabled: false
+
+Rails/I18nLocaleTexts:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/Lambda:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/EmptyMethod:
+  EnforcedStyle: expanded
+
+Style/SymbolArray:
+  Enabled: true
+
+Layout/LineLength:
+  Enabled: false
+
+Metrics/AbcSize:
+  Max: 20
+
+Metrics/BlockLength:
+  Exclude:
+    - test/**/*
+
+Metrics/ClassLength:
+  Exclude:
+    - test/**/*
+
+Metrics/MethodLength:
+  Max: 20
+  Exclude:
+    - test/**/*
+
+Naming/MethodParameterName:
+  AllowedNames: [io, id, to, by, on, in, at, ip, db, os, pp, q]
+
+Naming/VariableNumber:
+  Enabled: false

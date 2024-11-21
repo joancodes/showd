@@ -63,6 +63,10 @@ group :development do
   gem 'spring'
   # Use sqlite3 as the development database for Active Record
   gem 'sqlite3', '~> 2.1'
+
+  # Linting
+  gem 'rubocop'
+  gem 'rubocop-rails'
 end
 
 group :production do
