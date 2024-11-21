@@ -10,7 +10,7 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'jquery.raty.js', "data-turbolinks-track" => false %>
     <%= render 'application/favicon' %>
-   
+
   </head>
 
   <body>
@@ -53,20 +53,20 @@
     <% end %>
 
     <% if alert %>
-      <p class="alert"><%= alert %></p> 
+      <p class="alert"><%= alert %></p>
     <% end %>
-    
+
    <div class="container">
     <%= yield %>
     </div>
 
     <div class="footer">
       <div class="footer-links">
-          <%= image_tag  "gmail.png", class: "gmail-img" %> 
+          <%= image_tag  "gmail.png", class: "gmail-img" %>
           <%= mail_to "njugunajoan35@gmail.com", "Email Me", class: "footer-email"%>
           <br > <br >
           Modified by <%= link_to "Joan Njuguna ", "https://github.com/joancodes/showd", target: "_blank", class: "github-link" %><span class="glyphicon glyphicon-heart-empty "></span>
-      </div>  
+      </div>
     </div>
   </body>
 </html>

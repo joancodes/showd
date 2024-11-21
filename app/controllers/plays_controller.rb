@@ -27,8 +27,8 @@ class PlaysController < ApplicationController
   end
 
   def create
-    @play = current_user.plays.build(play_params)
-    @play.category_id = params[:category_id]
+    @category = Category.find(params[:category_id]) # Ensure the category exists
+    @play = @category.plays.build(play_params.merge(user: current_user))
 
     if @play.save
       redirect_to root_path

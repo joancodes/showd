@@ -4,6 +4,7 @@ class Play < ApplicationRecord
   belongs_to :user
   belongs_to :category
   has_many :reviews
+  delegate :name, to: :category, prefix: true
 
   has_one_attached :image
 
