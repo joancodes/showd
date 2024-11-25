@@ -17,6 +17,8 @@ gem 'bundler-audit'
 
 gem 'aws-sdk-s3', require: false
 
+gem 'bootstrap', '~> 5.2', '>= 5.2.3'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 8.0.0'
 
