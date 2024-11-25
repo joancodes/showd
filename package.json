@@ -1,5 +1,7 @@
 {
   "name": "brodway",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "bootstrap": "^5.3.3"
+  }
 }
