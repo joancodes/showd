@@ -14,37 +14,44 @@
   </head>
 
   <body>
-
-    <nav class="navbar navbar-default">
-      <div class="container">
-        <div class="navbar-header">
-          <%= link_to  "Showd", root_path, class: "navbar-brand" %>
-        </div>
-
-        <ul class="nav navbar-nav navbar-right">
-         <% if user_signed_in? %>
-          <li> <%= link_to  "Sign Out", destroy_user_session_path, method: :delete %></li>
-         <% else %>
-          <li> <%= link_to  "Sign Up", new_user_registration_path %></li>
-          <li> <%= link_to  "Log In", new_user_session_path %></li>
-         <% end %>
-        </ul>
-        <ul class="nav navbar-nav">
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Genres <span class="caret"></span></a>
-            <ul class="dropdown-menu" role="menu">
-              <% Category.all.each do |category| %>
-                <li class="<%= 'active' if params[:category] == category.name %>">
-                  <%= link_to category.name, plays_path(category: category.name), class: "link" %>
-                </li>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container container-fluid">
+        <div class="d-flex align-items-center">
+          <%= link_to  "SHOWD", root_path, class: "navbar-brand" %>
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <a class="nav-link btn dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Genres
+              </a>
+              <ul class="dropdown-menu">
+                <% Category.all.each do | category | %>
+                  <li class="<%= 'active' if params[:category] == category.name %>">
+                    <%= link_to category.name, plays_path(category: category.name), class: "link dropdown-item" %>
+                  </li>
                 <% end %>
-            </ul>
-          </li>
+              </ul>
+            </li>
+            <% if user_signed_in? %>
+              <li class="nav-item">
+                <%=link_to "Add Play", new_play_path, class: "btn btn-outline-secondary" %>
+              </li>
+            <% end %>
+          </ul>
+        </div>
+        <ul class="navbar-nav">
           <% if user_signed_in? %>
-            <li> <%=link_to "Add Play", new_play_path %></li>
+            <li class="nav-item">
+              <%= link_to  "Sign Out", destroy_user_session_path, method: :delete, class: "nav-link" %>
+            </li>
+          <% else %>
+            <li class="nav-item">
+              <%= link_to  "Sign Up", new_user_registration_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to  "Log In", new_user_session_path, class: "nav-link" %>
+            </li>
           <% end %>
         </ul>
-        </div>
       </div>
     </nav>
 
@@ -56,14 +63,14 @@
       <p class="alert"><%= alert %></p>
     <% end %>
 
-   <div class="container">
-    <%= yield %>
+    <div class="container">
+      <%= yield %>
     </div>
 
     <div class="footer">
       <div class="footer-links">
-          <%= image_tag  "gmail.png", class: "gmail-img" %>
-          <%= mail_to "njugunajoan35@gmail.com", "Email Me", class: "footer-email"%>
+        <%= image_tag  "gmail.png", class: "gmail-img" %>
+        <%= mail_to "njugunajoan35@gmail.com", "Email Me", class: "footer-email"%>
           <br > <br >
           Modified by <%= link_to "Joan Njuguna ", "https://github.com/joancodes/showd", target: "_blank", class: "github-link" %><span class="glyphicon glyphicon-heart-empty "></span>
       </div>
