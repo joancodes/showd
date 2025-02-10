@@ -148,6 +148,7 @@ GEM
     drb (2.2.1)
     erubi (1.13.0)
     execjs (2.10.0)
+    ffi (1.17.0-aarch64-linux-gnu)
     ffi (1.17.0-arm64-darwin)
     ffi (1.17.0-x86_64-linux-gnu)
     globalid (1.2.1)
@@ -196,6 +197,8 @@ GEM
     net-smtp (0.5.0)
       net-protocol
     nio4r (2.7.4)
+    nokogiri (1.17.1-aarch64-linux)
+      racc (~> 1.4)
     nokogiri (1.17.1-arm64-darwin)
       racc (~> 1.4)
     nokogiri (1.17.1-x86_64-linux)
@@ -320,6 +323,7 @@ GEM
       actionpack (>= 6.1)
       activesupport (>= 6.1)
       sprockets (>= 3.0.0)
+    sqlite3 (2.4.1-aarch64-linux-gnu)
     sqlite3 (2.4.1-arm64-darwin)
     sqlite3 (2.4.1-x86_64-linux-gnu)
     stringio (3.1.2)
@@ -354,6 +358,7 @@ GEM
     zeitwerk (2.7.1)
 
 PLATFORMS
+  aarch64-linux
   arm64-darwin-21
   arm64-darwin-22
   arm64-darwin-23
