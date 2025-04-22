@@ -10,5 +10,5 @@ class Play < ApplicationRecord
 
   validates :title, :description, :director, presence: true
 
-  validates :image, attached: true, content_type: ['image/png', 'image/jpg', 'image/jpeg']
+  validates :image, attached: true, content_type: ['image/png', 'image/jpeg']
 end
