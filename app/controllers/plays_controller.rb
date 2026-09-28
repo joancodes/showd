@@ -6,10 +6,10 @@ class PlaysController < ApplicationController
 
   def index
     if params[:category].blank?
-      @plays = Play.order('created_at DESC')
+      @plays = Play.order(created_at: :desc)
     else
       @category_id = Category.find_by(name: params[:category]).id
-      @plays = Play.where(category_id: @category_id).order('created_at DESC')
+      @plays = Play.where(category_id: @category_id).order(created_at: :desc)
     end
   end
 
@@ -32,7 +32,7 @@ class PlaysController < ApplicationController
   end
 
   def create
-    @category = Category.find(params[:category_id]) # Ensure the category exists
+    @category = Category.find(params.expect(:category_id)) # Ensure the category exists
     @play = @category.plays.build(play_params.merge(user: current_user))
 
     if @play.save
@@ -61,10 +61,10 @@ class PlaysController < ApplicationController
   private
 
   def find_play
-    @play = Play.find(params[:id])
+    @play = Play.find(params.expect(:id))
   end
 
   def play_params
-    params.require(:play).permit(:title, :description, :director, :category_id, :image)
+    params.expect(play: %i[title description director category_id image])
   end
 end

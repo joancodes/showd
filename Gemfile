@@ -19,6 +19,8 @@ gem 'aws-sdk-s3', require: false
 
 gem 'bootstrap', '~> 5.2', '>= 5.2.3'
 
+gem 'rubyzip', '~> 3.4'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 8.0.0'
 
@@ -61,7 +63,6 @@ group :development do
   gem 'listen', '>= 3.5'
   gem 'web-console', '>= 3.3.0'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'rails_real_favicon'
   gem 'spring'
   # Use sqlite3 as the development database for Active Record
   gem 'sqlite3', '~> 2.1'

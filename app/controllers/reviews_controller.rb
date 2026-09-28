@@ -38,14 +38,14 @@ class ReviewsController < ApplicationController
   private
 
   def review_params
-    params.require(:review).permit(:rating, :comment)
+    params.expect(review: %i[rating comment])
   end
 
   def find_play
-    @play = Play.find(params[:play_id])
+    @play = Play.find(params.expect(:play_id))
   end
 
   def find_review
-    @review = Review.find(params[:id])
+    @review = Review.find(params.expect(:id))
   end
 end

@@ -263,10 +263,6 @@ GEM
     rails_12factor (0.0.3)
       rails_serve_static_assets
       rails_stdout_logging
-    rails_real_favicon (0.1.1)
-      json (>= 1.7, < 3)
-      rails
-      rubyzip (~> 2)
     rails_serve_static_assets (0.0.5)
     rails_stdout_logging (0.0.5)
     railties (8.0.5.1)
@@ -320,7 +316,7 @@ GEM
       rubocop (>= 1.89.0, < 2.0)
       rubocop-ast (>= 1.44.0, < 2.0)
     ruby-progressbar (1.13.0)
-    rubyzip (2.4.1)
+    rubyzip (3.7.0)
     sass-rails (6.0.0)
       sassc-rails (~> 2.1, >= 2.1.1)
     sassc (2.4.0)
@@ -410,9 +406,9 @@ DEPENDENCIES
   puma
   rails (~> 8.0.0)
   rails_12factor
-  rails_real_favicon
   rubocop
   rubocop-rails
+  rubyzip (~> 3.4)
   sass-rails
   selenium-webdriver
   simple_form
